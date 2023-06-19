@@ -70,7 +70,7 @@ export class SmolLogger {
   }
 
   wrap = (
-    fnToWrap: Function, // todo: improve the typing on this, please help
+    fnToWrap: (...args: any[]) => any,
     opts = {} as {wrapLogName: string, logTransformer: Function}  // todo: improve the typing on this, please help
     ) => async (...args: any[]) => {
     let result = 'NO RESULT'
